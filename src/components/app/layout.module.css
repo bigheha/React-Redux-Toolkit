@@ -1,7 +1,18 @@
 .grid {
+  position: relative;
+  display: grid;
+  height: auto;
+  grid-template-rows: max(40px, 5%) 1fr;
+  grid-template-columns: auto;
+  background-color: rgb(157, 197, 187);
+}
+
+@media all and (min-width: 600px) {
+  .grid {
     display: grid;
     height: 100%;
     grid-template-rows: max(40px, 5%) 1fr;
     grid-template-columns: 15% 1fr;
     background-color: rgb(157, 197, 187);
+  }
 }
