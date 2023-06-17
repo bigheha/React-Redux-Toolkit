@@ -1,0 +1,10 @@
+.list {
+  font-size: 2rem;
+  color: rgb(8, 45, 15);
+  text-align: start;
+  background-color: rgb(23, 184, 144);
+  border: none;
+}
+.list:focus {
+  background-color: rgb(11, 156, 120);
+}

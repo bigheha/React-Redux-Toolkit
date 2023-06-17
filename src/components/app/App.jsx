@@ -22,8 +22,6 @@ function App() {
     }
   }, [width]);
 
-  console.log({ isOpen });
-
   return (
     <>
       <div className={styles.grid}>

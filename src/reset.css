@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+
 html,
 body,
 div,
@@ -131,4 +133,5 @@ table {
 #root {
   height: 100vh;
   font-size: 10px;
+  font-family: "Poppins", sans-serif;
 }

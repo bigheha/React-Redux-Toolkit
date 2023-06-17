@@ -3,9 +3,9 @@ import styles from "./addTask.module.css";
 function NewTask() {
   return (
     <div className={styles.newTaskBtn}>
-      <p>ADD</p>
-      <p>+</p>
-      <p>NEW TASK</p>
+      <p className={styles.btnText}>ADD</p>
+      <p className={styles.plus}>+</p>
+      <p className={styles.btnText}>NEW TASK</p>
     </div>
   );
 }
