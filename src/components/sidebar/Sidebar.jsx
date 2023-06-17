@@ -4,7 +4,7 @@ import styles from "./sidebar.module.css";
 import List from "../list/List";
 
 export default function Sidebar({ width }) {
-  const lists = useSelector((state) => state.tasks.lists);
+  const lists = useSelector((state) => state.tasks.tasklists);
   const dispatch = useDispatch();
 
   return (
