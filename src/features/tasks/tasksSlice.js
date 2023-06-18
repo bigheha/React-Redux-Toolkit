@@ -26,14 +26,21 @@ const tasksSlice = createSlice({
       state.selectedList = action.payload;
     },
     addTask: (state, action) => {
-      // const targetList = state.find((list) => list.id === state.selectedList);
       const targetList = state.tasklists.find(
         (list) => list.id === state.selectedList
       );
       targetList.tasks.push(action.payload);
     },
+    removeTask: (state, action) => {
+      const targetList = state.tasklists.find(
+        (list) => list.id === state.selectedList
+      );
+      targetList.tasks = targetList.tasks.filter((task) => {
+        return task !== action.payload;
+      });
+    },
   },
 });
 
 export default tasksSlice.reducer;
-export const { select, addTask } = tasksSlice.actions;
+export const { select, addTask, removeTask } = tasksSlice.actions;

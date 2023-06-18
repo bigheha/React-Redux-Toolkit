@@ -3,6 +3,8 @@
   display: grid;
   height: auto;
   min-height: 100%;
+  width: auto;
+  min-width: 100%;
   grid-template-rows: max(40px, 5%) 1fr;
   grid-template-columns: auto;
   background-color: rgb(157, 197, 187);

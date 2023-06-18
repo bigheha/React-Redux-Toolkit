@@ -12,7 +12,7 @@
   border-radius: 10px;
   font-size: 1.5rem;
   z-index: 1000;
-  min-width: 300px;
+  min-width: 340px;
 }
 
 .overlay {
@@ -45,6 +45,7 @@ button {
 
 textarea {
   resize: none;
+  font-size: 1.4rem;
   border: 1px solid rgb(8, 45, 15);
   border-radius: 1rem;
 }

@@ -11,11 +11,17 @@ export default function Modal() {
       <div className={styles.overlay}></div>
       <div className={styles.modalBox}>
         <p className={styles.title}>Describe your task</p>
-        <textarea rows={10} cols={35}></textarea>
+        <textarea
+          rows={5}
+          cols={20}
+          maxLength={300}
+          placeholder="(300 chars max)"
+        ></textarea>
         <div className={styles.buttons}>
           <button
-            onClick={() => {
-              dispatch(addTask("heehee"));
+            onClick={(e) => {
+              const who = e.target.parentElement.parentElement.children[1];
+              dispatch(addTask(who.value));
               dispatch(closeModal());
             }}
           >
