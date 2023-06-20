@@ -1,6 +1,6 @@
 import styles from "./addTask.module.css";
 import { useDispatch } from "react-redux";
-import { openModal } from "../../features/modal/modalSlice";
+import { openModal } from "../../features/taskModal/taskModalSlice";
 function NewTask() {
   const dispatch = useDispatch();
 

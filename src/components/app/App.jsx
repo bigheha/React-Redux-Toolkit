@@ -8,11 +8,13 @@ import useWindowWidth from "../../customHooks/useWindowWidth";
 import { useDispatch, useSelector } from "react-redux";
 import { close, open } from "../../features/sidebar/sidebarSlice";
 import { useEffect } from "react";
-import Modal from "../modal/Modal";
+import AddTaskModal from "../addTaskModal/AddTaskModal";
+import AddListModal from "../addListModal/addListModal";
 
 function App() {
   const isOpen = useSelector((state) => state.sidebar.isOpen);
-  const modalOpen = useSelector((state) => state.modal.modalOpen);
+  const taskModalOpen = useSelector((state) => state.taskModal.modalOpen);
+  const listModalOpen = useSelector((state) => state.listModal.listModalOpen);
   const width = useWindowWidth();
   const dispatch = useDispatch();
 
@@ -31,7 +33,8 @@ function App() {
         {isOpen && <Sidebar width={width} />}
         <TasksSpace />
       </div>
-      {modalOpen && <Modal />}
+      {taskModalOpen && <AddTaskModal />}
+      {listModalOpen && <AddListModal />}
     </>
   );
 }

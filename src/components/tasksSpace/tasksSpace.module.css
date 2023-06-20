@@ -9,6 +9,10 @@
   grid-template-rows: repeat(auto-fit, min(200px));
 }
 
+.noListText {
+  font-size: 2rem;
+}
+
 @media all and (min-width: 600px) {
   .tasksGrid {
     grid-row: 2/3;

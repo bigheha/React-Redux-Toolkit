@@ -6,14 +6,25 @@ import { useSelector } from "react-redux";
 function TasksSpace() {
   const lists = useSelector((state) => state.tasks.tasklists);
   const idOfSelectedList = useSelector((state) => state.tasks.selectedList);
-  const selectedList = lists.filter((list) => list.id == idOfSelectedList);
+  let selectedList = lists.find((list) => list.id == idOfSelectedList);
+
+  if (selectedList === undefined) {
+    selectedList = lists.at(lists.length - 1);
+    console.log(selectedList);
+  }
 
   return (
     <div className={styles.tasksGrid}>
-      {selectedList[0].tasks.map((task, id) => {
-        return <Task key={id}>{task}</Task>;
-      })}
-      <AddTask />
+      {selectedList ? (
+        <>
+          {selectedList.tasks.map((task, id) => {
+            return <Task key={id}>{task}</Task>;
+          })}
+          <AddTask />
+        </>
+      ) : (
+        <p className={styles.noListText}>Select new list</p>
+      )}
     </div>
   );
 }

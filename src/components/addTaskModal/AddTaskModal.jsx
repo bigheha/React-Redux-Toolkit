@@ -1,9 +1,9 @@
 import styles from "./modal.module.css";
 import { useDispatch } from "react-redux";
-import { closeModal } from "../../features/modal/modalSlice";
+import { closeModal } from "../../features/taskModal/taskModalSlice";
 import { addTask } from "../../features/tasks/tasksSlice";
 
-export default function Modal() {
+export default function AddTaskModal() {
   const dispatch = useDispatch();
 
   return (

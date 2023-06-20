@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
 
 export const tasklists = [
   {
@@ -25,6 +26,19 @@ const tasksSlice = createSlice({
     select: (state, action) => {
       state.selectedList = action.payload;
     },
+    addList: (state, action) => {
+      const newList = {
+        name: action.payload,
+        id: uuidv4(),
+        tasks: [],
+      };
+      state.tasklists.push(newList);
+    },
+    deleteList: (state, action) => {
+      state.tasklists = state.tasklists.filter(
+        (list) => list.name != action.payload
+      );
+    },
     addTask: (state, action) => {
       const targetList = state.tasklists.find(
         (list) => list.id === state.selectedList
@@ -43,4 +57,5 @@ const tasksSlice = createSlice({
 });
 
 export default tasksSlice.reducer;
-export const { select, addTask, removeTask } = tasksSlice.actions;
+export const { select, addTask, removeTask, addList, deleteList } =
+  tasksSlice.actions;

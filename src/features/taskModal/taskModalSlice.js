@@ -4,8 +4,8 @@ const initialState = {
   modalOpen: false,
 };
 
-const modalSLice = createSlice({
-  name: "modal",
+const taskModalSLice = createSlice({
+  name: "taskModal",
   initialState,
   reducers: {
     openModal: (state) => {
@@ -17,5 +17,5 @@ const modalSLice = createSlice({
   },
 });
 
-export default modalSLice.reducer;
-export const { openModal, closeModal } = modalSLice.actions;
+export default taskModalSLice.reducer;
+export const { openModal, closeModal } = taskModalSLice.actions;

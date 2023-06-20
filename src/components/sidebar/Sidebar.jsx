@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { close } from "../../features/sidebar/sidebarSlice";
+import { openListModal } from "../../features/listModal/listModalSlice";
 import styles from "./sidebar.module.css";
 import List from "../list/List";
 
@@ -26,6 +27,13 @@ export default function Sidebar({ width }) {
           </List>
         );
       })}
+      <button
+        onClick={() => {
+          dispatch(openListModal());
+        }}
+      >
+        add list
+      </button>
     </div>
   );
 }
