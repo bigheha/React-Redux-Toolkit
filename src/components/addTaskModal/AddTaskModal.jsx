@@ -2,9 +2,11 @@ import styles from "./modal.module.css";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../../features/taskModal/taskModalSlice";
 import { addTask } from "../../features/tasks/tasksSlice";
+import { useState } from "react";
 
 export default function AddTaskModal() {
   const dispatch = useDispatch();
+  const [taskValue, setTaskValue] = useState("");
 
   return (
     <>
@@ -16,12 +18,14 @@ export default function AddTaskModal() {
           cols={20}
           maxLength={300}
           placeholder="(300 chars max)"
+          onChange={(e) => {
+            setTaskValue(e.target.value);
+          }}
         ></textarea>
         <div className={styles.buttons}>
           <button
             onClick={(e) => {
-              const who = e.target.parentElement.parentElement.children[1];
-              dispatch(addTask(who.value));
+              dispatch(addTask(taskValue));
               dispatch(closeModal());
             }}
           >

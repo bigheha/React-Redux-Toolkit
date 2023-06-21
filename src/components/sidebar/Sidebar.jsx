@@ -28,6 +28,7 @@ export default function Sidebar({ width }) {
         );
       })}
       <button
+        className={styles.newListBtn}
         onClick={() => {
           dispatch(openListModal());
         }}

@@ -9,6 +9,7 @@
   max-width: 390px;
   min-height: 200px;
   font-size: 1rem;
+  box-shadow: 10px 10px 5px rgb(102, 132, 125);
 }
 
 .text {

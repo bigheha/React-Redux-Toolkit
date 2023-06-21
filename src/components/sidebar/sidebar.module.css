@@ -18,6 +18,14 @@
   margin: 4px 8px;
 }
 
+.newListBtn {
+  margin: 5px 5px;
+}
+
+.newListBtn:hover {
+  background-color: rgb(15, 133, 103);
+}
+
 @media all and (min-width: 600px) {
   .sidebar {
     position: inherit;

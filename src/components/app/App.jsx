@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { close, open } from "../../features/sidebar/sidebarSlice";
 import { useEffect } from "react";
 import AddTaskModal from "../addTaskModal/AddTaskModal";
-import AddListModal from "../addListModal/addListModal";
+import AddListModal from "../addListModal/AddListModal";
 
 function App() {
   const isOpen = useSelector((state) => state.sidebar.isOpen);
