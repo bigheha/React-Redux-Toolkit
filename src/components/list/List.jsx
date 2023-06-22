@@ -11,8 +11,7 @@ export default function List({ children, id }) {
       </button>
       <button
         onClick={(e) => {
-          const target = e.target.parentElement.firstChild.innerText;
-          dispatch(deleteList(target));
+          dispatch(deleteList(children));
         }}
       >
         delete
